@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangers Coding Club v2 — kids learning to code, together</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">🤠 Rangers Coding Club <span class="v2">v2</span></div>
+    <nav>
+      <a href="#lessons">Lessons</a>
+      <a href="#projects">Projects</a>
+      <a href="#join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Every ranger starts somewhere.<br>Ours start with code.</h1>
+    <p class="lede">Rangers Coding Club is a coding club for younger students — a place to learn how computers actually work by building real little things: games, websites, animations, robots-in-spirit. This page is version 2 of the club's website: a cleaner, faster refresh of the first site I built for the club.</p>
+  </section>
+
+  <section id="lessons" class="card">
+    <h2>What we learn</h2>
+    <p>Four tracks, picked by age and interest. Everybody starts at lesson one — nobody needs experience, and nobody gets left behind for asking questions. That's the whole rule.</p>
+    <div class="track-grid" id="trackGrid"></div>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>What rangers build</h2>
+    <p>Projects are the curriculum. These are the kinds of things members work toward — start with one, finish it, show it off on demo day, pick the next one.</p>
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <section class="card week-card">
+    <h2>A normal week at the club</h2>
+    <div class="week-grid">
+      <div><strong>Warm-up (10 min)</strong><span>A tiny puzzle or typing challenge to get brains on.</span></div>
+      <div><strong>Lesson (25 min)</strong><span>One new concept, shown live, then everybody tries it.</span></div>
+      <div><strong>Build time (40 min)</strong><span>Project work, with mentors floating to unstick people.</span></div>
+      <div><strong>Show &amp; tell (10 min)</strong><span>Two rangers demo what they made — finished or gloriously broken.</span></div>
+    </div>
+    <p class="note">Meeting day/time and location are set each season — the placeholder below in the Join section is where they go.</p>
+  </section>
+
+  <section id="join" class="card">
+    <h2>Join the club</h2>
+    <p class="placeholder-line">📍 Meets: [ day + time — placeholder ] · [ location — placeholder ] · Open to students in grades [ range — placeholder ]</p>
+    <form id="joinForm">
+      <div class="field-grid">
+        <label class="field"><span>Student's name</span>
+          <input type="text" id="jName" required maxlength="50" placeholder="Student name">
+        </label>
+        <label class="field"><span>Grade</span>
+          <select id="jGrade">
+            <option>3rd–5th grade</option><option>6th–8th grade</option><option>9th–12th grade</option>
+          </select>
+        </label>
+        <label class="field"><span>Parent/guardian email</span>
+          <input type="email" id="jEmail" required maxlength="70" placeholder="parent@example.com">
+        </label>
+        <label class="field"><span>Which track sounds fun?</span>
+          <select id="jTrack"></select>
+        </label>
+      </div>
+      <label class="field"><span>Anything we should know? (experience, interests, questions)</span>
+        <textarea id="jNotes" rows="2" maxlength="240" placeholder="Optional"></textarea>
+      </label>
+      <button type="submit" class="btn-primary">Sign up</button>
+      <p class="form-msg" id="formMsg"></p>
+    </form>
+    <p class="honest">Honest note: in this v2 demo the form saves sign-ups in your browser only (localStorage) — nothing is emailed or sent anywhere yet. The live version connects this form to the club's real inbox. See the README.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>Rangers Coding Club v2 — the refreshed club site. Version 1 lives in my earlier <em>rangers-coding-club</em> repo; this is the next version of it. Plain HTML, CSS, and JavaScript.</p></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
